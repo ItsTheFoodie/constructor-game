@@ -7,8 +7,8 @@
 - make the square move
 
 ## SAVE FOR LATER
--There are four columns of shapes; they each get faster
--There is a shape you need to collect at the end
+- There are four columns of shapes; they each get faster
+- There is a shape you need to collect at the end
 - You cannot touch the moving shapes
--If you touch the shape, you lose 
--If you get the shape you need to collect, you win!
+- If you touch the shape, you lose 
+- If you get the shape you need to collect, you win!
