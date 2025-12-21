@@ -1,7 +1,24 @@
 class Circle {
-  constructor(x, y, w) {
+  constructor(x, y, d,c) {
     this.x = x;
     this.y = y;
-    this.w = w;
+    this.d = d;
+    this.c = c;
   }
+
+
+show() {
+  noStroke();
+  fill(this.c);
+  circle(this.x,this.y,this.d);
 }
+
+
+
+
+
+
+
+
+}
+
