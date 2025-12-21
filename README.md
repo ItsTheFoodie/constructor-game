@@ -6,9 +6,9 @@
 - add a square to the canvas using the constructor function
 - make the square move
 
-###save for later
--THERE ARE FOUR COLUNMS OF SHAPE THEY EACH GET FASTER EACH TIME
--THERE IS A SHAPE THAT YOU HAVE TO COLLECT AT THE END
-- YOU CANNOT TOUCH A SHAPE
--IF YOU TOUCH A THE SHAPE YOU LOSE
--IF YOU GET THE SHAPE YOU NEED TO COLLECT YOU WIN
+## SAVE FOR LATER
+-There are four columns of shapes; they each get faster
+-There is a shape you need to collect at the end
+- You cannot touch the moving shapes
+-If you touch the shape, you lose 
+-If you get the shape you need to collect, you win!
