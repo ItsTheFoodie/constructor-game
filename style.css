@@ -1,0 +1,10 @@
+html, body {
+  background-color: lightyellow;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+canvas {
+  display: block;
+}
