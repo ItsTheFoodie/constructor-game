@@ -23,15 +23,12 @@ function draw() {
     background("lightYellow");
     sun.show();
 
-    snowflakes[0].show();
-    snowflakes[1].show();
-    snowflakes[2].show();
-    snowflakes[3].show();
-
-    snowflakes[0].move();
-    snowflakes[1].move();
-    snowflakes[2].move();
-    snowflakes[3].move();
+    for (i=0; i<4; i++) {
+        snowflakes[i].show()
+        snowflakes[i].move()
+        snowflake[i].show();
+        sowflake[i].show();
+    }
 
     if(snowflakes[0].y > height/3){
         snowflake[0].move2();
@@ -46,25 +43,6 @@ function draw() {
         sowflake[2].move3();
         sowflake[3].move3();
     }
-
-
-    snowflake[0].show();
-    snowflake[1].show();
-    snowflake[2].show();
-    snowflake[3].show();
-
-    sowflake[0].show();
-    sowflake[1].show();
-    sowflake[2].show();
-    sowflake[3].show();
-
-  
-    
-    // sowflake[0].move3();
-    // sowflake[1].move3();
-    // sowflake[2].move3();
-    // sowflake[3].move3();
-
 }
 
 function mouseMoved(){
