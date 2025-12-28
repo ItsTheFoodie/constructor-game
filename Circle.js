@@ -14,14 +14,14 @@ show() {
 }
 
 move(){
-  this.y ++;
+  this.y += 10;
 }
 move2(){
-  this.y ++;
+  this.y += 10;
 }
 
 move3(){
-  this.y ++; 
+  this.y += 10; 
 }
 
 

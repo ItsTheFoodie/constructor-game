@@ -28,11 +28,23 @@ function draw() {
     snowflakes[2].show();
     snowflakes[3].show();
 
-    if(snowflakes[0].y > height/5){
+    snowflakes[0].move();
+    snowflakes[1].move();
+    snowflakes[2].move();
+    snowflakes[3].move();
+
+    if(snowflakes[0].y > height/3){
         snowflake[0].move2();
         snowflake[1].move2();
         snowflake[2].move2();
         snowflake[3].move2();
+    }
+   
+    if(snowflake[0].y > height/6){
+        sowflake[0].move3();
+        sowflake[1].move3();
+        sowflake[2].move3();
+        sowflake[3].move3();
     }
 
 
@@ -47,11 +59,7 @@ function draw() {
     sowflake[3].show();
 
   
-    snowflakes[0].move();
-    snowflakes[1].move();
-    snowflakes[2].move();
-    snowflakes[3].move();
-
+    
     // sowflake[0].move3();
     // sowflake[1].move3();
     // sowflake[2].move3();
