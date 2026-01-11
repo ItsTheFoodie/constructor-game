@@ -1,9 +1,10 @@
 class Circle {
-  constructor(x, y, d,c) {
+  constructor(x, y, d, c, s) {
     this.x = x;
     this.y = y;
     this.d = d;
     this.c = c;
+    this.s = s;
   }
 
 
@@ -14,20 +15,7 @@ show() {
 }
 
 move(){
-  this.y += 10;
+  this.y += this.s;
 }
-move2(){
-  this.y += 10;
-}
-
-move3(){
-  this.y += 10; 
-}
-
-
-
-
-
-
 }
 
