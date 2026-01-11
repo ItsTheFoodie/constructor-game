@@ -37,12 +37,18 @@ function draw() {
         snowflake[3].move2();
     }
    
-    if(snowflake[0].y > height/6){
+    if(snowflake[0].y > height/3){
         sowflake[0].move3();
         sowflake[1].move3();
         sowflake[2].move3();
         sowflake[3].move3();
     }
+
+    if(sowflake[0].y > height){
+        sowflake[0].y = 0;
+        sowflake[1].y = 0;
+        sowflake[2].y = 0;
+        sowflake[3].y = 0;
 }
 
 function mouseMoved(){
@@ -51,4 +57,5 @@ function mouseMoved(){
 
 function mouseDragged(){
     sun.x = mouseX;
+}
 }
