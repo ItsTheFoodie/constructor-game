@@ -13,3 +13,5 @@
 ## SAVE FOR LATER(UNFINISHED)
 - You cannot touch the moving shapes
 - If you touch the shape, you lose  
+- scoreboard
+- timer
