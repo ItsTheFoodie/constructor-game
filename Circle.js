@@ -14,11 +14,12 @@ show() {
   circle(this.x,this.y,this.d);
 }
 
-move(){
+move() {
   this.y += this.s;
   if(this.y > height){
     this.y = 0;
+    this.x = random(0,width);
   }
 }
-}
 
+}
