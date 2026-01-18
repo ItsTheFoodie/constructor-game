@@ -16,6 +16,9 @@ show() {
 
 move(){
   this.y += this.s;
+  if(this.y > height){
+    this.y = 0;
+  }
 }
 }
 
