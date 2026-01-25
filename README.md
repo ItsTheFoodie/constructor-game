@@ -8,10 +8,9 @@
 - There are four columns of shapes; they each get faster-done
 - There is a shape you need to collect at the end- scrapped
 - If you get the shape you need to collect, you win!-scrapped
-
+- scoreboard - scrrapped
 
 ## SAVE FOR LATER(UNFINISHED)
 - You cannot touch the moving shapes
-- If you touch the shape, you lose  
-- scoreboard
+- Collision Detection
 - timer
