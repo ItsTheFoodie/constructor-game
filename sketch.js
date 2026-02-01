@@ -1,21 +1,23 @@
 let sun;
 let snowflakes = [];
+let startTime;
+
+
+
 
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+    startTime = millis();
+    textAlign(CENTER, CENTER);
+    textSize(40);
 
    sun = new Circle(100,windowHeight/2, 67,"#FFE09C");
    for (let i = 0; i < 8; i++) {
 
-      snowflakes.push(new Circle(width/8+i*width/5,0, 80, "lightBlue", random(3,10)));
+      snowflakes.push(new Circle(width/8+i*width/7,0, random(70,90), "lightBlue", random(4,18)));
    }
-//     for (let i = 0; i < 8; i++) {
-//     snowflakes.push(new Circle(width/8+i*width/5,-950, 80, "lightBlue", 8.5+i));
-//    }
-//     for (let i = 0; i < 8; i++) {
-//       snowflakes.push(new Circle(width/8+i*width/5,-950, 80, "lightBlue", 7.5+i));
-//    }
+
 }
 
 
@@ -27,7 +29,15 @@ function draw() {
         snowflakes[i].show();
         snowflakes[i].move();
     }
+ //how much time has passed since the start of this
+  let timePassed = millis() - startTime;
+//floor is runding to the nearest whole number so there is no decimals
+  let minutes = floor(timePassed / 60000);
+  let seconds = floor(timePassed / 1000) % 60;
+  let milliseconds = floor(timePassed / 10) % 100;
 
+  text(minutes + " : " + seconds + " : " + milliseconds,
+       width /2,100);
 
     
 
