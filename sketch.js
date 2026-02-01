@@ -38,7 +38,10 @@ function draw() {
 
   text(minutes + " : " + seconds + " : " + milliseconds,
        width /2,100);
-
+  text("Highscore: " + localStorage.getItem('HIGHSCORE'), width/2, 150)
+  textSize(35);
+  text("Move the sun with your mouse to avoid the snowflakes!", width/2,50);
+  
     
 
   

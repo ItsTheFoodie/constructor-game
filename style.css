@@ -8,3 +8,12 @@ html, body {
 canvas {
   display: block;
 }
+.fade-hidden {
+    opacity: 0;
+    /* transition property animates opacity changes over 1 second with an ease-in effect */
+    transition: opacity 1s ease-in; 
+}
+
+.fade-visible {
+    opacity: 1;
+}
