@@ -1,6 +1,7 @@
 let sun;
 let snowflakes = [];
 let startTime;
+let fade = 255; 
 
 
 
@@ -29,23 +30,28 @@ function draw() {
         snowflakes[i].show();
         snowflakes[i].move();
     }
- //how much time has passed since the start of this
+ 
   let timePassed = millis() - startTime;
-//floor is runding to the nearest whole number so there is no decimals
+
   let minutes = floor(timePassed / 60000);
   let seconds = floor(timePassed / 1000) % 60;
   let milliseconds = floor(timePassed / 10) % 100;
-
-  text(minutes + " : " + seconds + " : " + milliseconds,
-       width /2,100);
-  text("Highscore: " + localStorage.getItem('HIGHSCORE'), width/2, 150)
   textSize(35);
-  text("Move the sun with your mouse to avoid the snowflakes!", width/2,50);
-  
-    
+  text(minutes + " : " + seconds + " : " + milliseconds, width /2,100);
+  text("Highscore: " + localStorage.getItem('HIGHSCORE'), width/2, 150)
+
+  textFont('dancing script');
+  fill(173, 216, 230, fade)
+  textStyle(ITALIC);
+  text("Move the sun with your mouse or finger to avoid the snowflakes!", width/2,50);
+
+  if (fade > 0) {
+    fade -= 1; 
+  }
+}
 
   
-}
+
 
 function mouseMoved(){
     sun.x = mouseX;
