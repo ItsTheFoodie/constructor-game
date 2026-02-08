@@ -18,6 +18,9 @@ function setup(){
 
       snowflakes.push(new Circle(width/8+i*width/7,0, random(70,90), "lightBlue", random(4,18)));
    }
+   if(localStorage.getItem('HIGHSCORE') == null){
+localStorage.setItem('HIGHSCORE',0)
+}
 
 }
 
@@ -48,6 +51,7 @@ function draw() {
   if (fade > 0) {
     fade -= 1; 
   }
+  
 }
 
   

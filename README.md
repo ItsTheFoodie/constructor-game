@@ -8,8 +8,8 @@
 - There are four columns of circle; they each get faster-done
 - There is a shape you need to collect at the end- scrapped
 - If you get the shape you need to collect, you win!-scrapped
-- scoreboard - scrrapped
--timer-done
+- scoreboard-scrapped
+- timer-done
 ## SAVE FOR LATER(UNFINISHED)
-- Collision Detection
+- Collision detection for circles
 - Highscore function
