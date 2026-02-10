@@ -7,6 +7,7 @@ let fade = 255;
 
 
 
+
 function setup(){
     createCanvas(windowWidth, windowHeight);
     startTime = millis();
@@ -16,16 +17,17 @@ function setup(){
    sun = new Circle(100,windowHeight/2, 67,"#FFE09C");
    for (let i = 0; i < 8; i++) {
 
-      snowflakes.push(new Circle(width/8+i*width/7,0, random(70,90), "lightBlue", random(4,18)));
+      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(4,18)));
    }
    if(localStorage.getItem('HIGHSCORE') == null){
 localStorage.setItem('HIGHSCORE',0)
 }
-
+textWrap(CHAR)
 }
 
 
 function draw() {
+    console.log(localStorage.getItem('HIGHSCORE'))
     background("lightYellow");
     sun.show();
 
@@ -39,19 +41,29 @@ function draw() {
   let minutes = floor(timePassed / 60000);
   let seconds = floor(timePassed / 1000) % 60;
   let milliseconds = floor(timePassed / 10) % 100;
-  textSize(35);
-  text(minutes + " : " + seconds + " : " + milliseconds, width /2,100);
-  text("Highscore: " + localStorage.getItem('HIGHSCORE'), width/2, 150)
+  textSize(width/70);
+  let timer = minutes + " : " + seconds + " : " + milliseconds;
+  text(timer, width /2,width/20);
+  text("Highscore: " + localStorage.getItem('HIGHSCORE'), width/2, width/15);
+      if(timer > localStorage.getItem('HIGHSCORE')){
+        localStorage.setItem('HIGHSCORE',timer)
+    }
+
 
   textFont('dancing script');
   fill(173, 216, 230, fade)
+  textAlign(CENTER, TOP);
   textStyle(ITALIC);
-  text("Move the sun with your mouse or finger to avoid the snowflakes!", width/2,50);
+  text("Move the sun with your mouse or finger to avoid the snowflakes!", width/2,width/39);
 
   if (fade > 0) {
     fade -= 1; 
   }
   
+  let space = dist(mouseX, sun.y, snowflakes.x, snowflakes.y);
+    if (space < snowflakes.d/2 + sun.d/2) {
+        noLoop();
+    }
 }
 
   
@@ -65,3 +77,6 @@ function mouseDragged(){
     sun.x = mouseX;
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
