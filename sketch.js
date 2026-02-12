@@ -59,13 +59,13 @@ function draw() {
   if (fade > 0) {
     fade -= 1; 
   }
-  
-  let space = dist(mouseX, sun.y, snowflakes.x, snowflakes.y);
-    if (space < snowflakes.d/2 + sun.d/2) {
+  for (i=0; i < snowflakes.length; i++) {
+  let space = dist(mouseX, sun.y, snowflakes[i].x, snowflakes[i].y);
+    if (space < snowflakes[i].d/2 + sun.d/2) {
         noLoop();
     }
 }
-
+}
   
 
 
