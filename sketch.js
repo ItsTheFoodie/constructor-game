@@ -17,7 +17,7 @@ function setup(){
    sun = new Circle(100,windowHeight/2, 67,"#FFE09C");
    for (let i = 0; i < 8; i++) {
 
-      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(4,7)));
+      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(18,19)));
    }
    if(localStorage.getItem('HIGHSCORE') == null){
 localStorage.setItem('HIGHSCORE',0)
