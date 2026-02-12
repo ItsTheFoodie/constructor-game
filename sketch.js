@@ -50,7 +50,7 @@ function draw() {
     }
 
 
-  textFont('dancing script');
+  textFont('Marck Script');
   fill(173, 216, 230, fade)
   textAlign(CENTER, TOP);
   textStyle(ITALIC);
@@ -64,7 +64,6 @@ function draw() {
     if (space < snowflakes[i].d/2 + sun.d/2) {
         noLoop();
     }
-    snowflakes[i].reset();
 }
 }
   

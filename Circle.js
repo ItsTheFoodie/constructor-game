@@ -16,8 +16,6 @@ show() {
 
 move() {
   this.y += this.s;
-}
-reset() {
    if(this.y > height){
     this.y = -10;
     this.x = random(0,width);
