@@ -69,6 +69,7 @@ function draw() {
         textSize(width/20);
         text("Refresh to try again.", width/2, height/2 + height/10);
     }
+    snowflakes[i].reset();
 }
 }
   
