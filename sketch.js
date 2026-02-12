@@ -54,6 +54,7 @@ function draw() {
   fill(173, 216, 230, fade)
   textAlign(CENTER, TOP);
   textStyle(ITALIC);
+  textSize(width/30);
   text("Move the sun with your mouse or finger to avoid the snowflakes!", width/2,width/39);
 
   if (fade > 0) {
