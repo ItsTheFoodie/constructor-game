@@ -54,11 +54,11 @@ function draw() {
   fill(173, 216, 230, fade)
   textAlign(CENTER, TOP);
   textStyle(ITALIC);
-  textSize(width/30);
+  textSize(width/50);
   text("Move the sun with your mouse or finger to avoid the snowflakes!", width/2,width/39);
 
   if (fade > 0) {
-    fade -= 1; 
+    fade -= 1.8; 
   }
   for (i=0; i < snowflakes.length; i++) {
   let space = dist(sun.x, sun.y, snowflakes[i].x, snowflakes[i].y);
