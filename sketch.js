@@ -17,7 +17,7 @@ function setup(){
    sun = new Circle(100,windowHeight/2, 67,"#FFE09C");
    for (let i = 0; i < 8; i++) {
 
-      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(4,18)));
+      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(1,3)));
    }
    if(localStorage.getItem('HIGHSCORE') == null){
 localStorage.setItem('HIGHSCORE',0)
@@ -63,6 +63,11 @@ function draw() {
   let space = dist(mouseX, sun.y, snowflakes[i].x, snowflakes[i].y);
     if (space < snowflakes[i].d/2 + sun.d/2) {
         noLoop();
+        fill("red");
+        textSize(width/10);
+        text("Game Over!", width/2, height/2);
+        textSize(width/20);
+        text("Refresh to try again.", width/2, height/2 + height/10);
     }
 }
 }
