@@ -17,7 +17,7 @@ function setup(){
    sun = new Circle(100,windowHeight/2, 67,"#FFE09C");
    for (let i = 0; i < 8; i++) {
 
-      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(18,19)));
+      snowflakes.push(new Circle(width/8+i*width/7,0, random(windowWidth/18,windowHeight/24), "lightBlue", random(11,19)));
    }
    if(localStorage.getItem('HIGHSCORE') == null){
 localStorage.setItem('HIGHSCORE',0)
@@ -30,6 +30,13 @@ function draw() {
     console.log(localStorage.getItem('HIGHSCORE'))
     background("lightYellow");
     sun.show();
+
+     for (i=0; i < snowflakes.length; i++) {
+  let space = dist(sun.x, sun.y, snowflakes[i].x, snowflakes[i].y);
+    if (space < snowflakes[i].d/2 + sun.d/2) {
+        noLoop();
+    }
+}
 
     for (i=0; i < snowflakes.length; i++) {
         snowflakes[i].show();
@@ -60,12 +67,6 @@ function draw() {
   if (fade > 0) {
     fade -= 1.8; 
   }
-  for (i=0; i < snowflakes.length; i++) {
-  let space = dist(sun.x, sun.y, snowflakes[i].x, snowflakes[i].y);
-    if (space < snowflakes[i].d/2 + sun.d/2) {
-        noLoop();
-    }
-}
 }
   
 
